@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Simran Kaur Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300d4ff'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='40' fill='white'%3ESK%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- 3D Robot Images -->
+    <div class="floating-robot robot-1">
+        <div class="robot-icon">🤖</div>
+    </div>
+    <div class="floating-robot robot-2">
+        <div class="robot-icon">👾</div>
+    </div>
+    <div class="floating-alien alien-1">
+        <div class="alien-icon">👽</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">SK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="skills.html" class="nav-link active">Skills</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Technical Skills</h1>
+            <p class="page-subtitle">My expertise in programming, web development, and AI technologies</p>
+        </div>
+    </section>
+
+    <!-- Skills Overview -->
+    <section class="skills-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>Skills Overview</h2>
+                    <p>I have developed a comprehensive skill set spanning multiple domains including programming, web development, AI/ML, and cybersecurity. My expertise ranges from foundational programming concepts to advanced machine learning applications.</p>
+                </div>
+                <div class="overview-stats">
+                    <div class="overview-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>8+</h3>
+                            <p>Programming Languages</p>
+                        </div>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>5+</h3>
+                            <p>AI/ML Frameworks</p>
+                        </div>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>3+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Skills Cards -->
+    <section class="skills-interactive">
+        <div class="container">
+            <div class="skills-grid-modern">
+                <div class="skills-card-modern" data-tilt>
+                    <div class="card-header-modern">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="card-badge">Programming</div>
+                    </div>
+                    <div class="card-content-modern">
+                        <h3>Programming Languages</h3>
+                        <div class="skills-list">
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-python"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>Python</h4>
+                                        <span class="skill-level">Advanced</span>
+                                        <p class="skill-description">Expert in Python with focus on data science, machine learning, web development, and automation.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-95"></div>
+                                </div>
+                                <div class="skill-percentage">95%</div>
+                            </div>
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-java"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>Java</h4>
+                                        <span class="skill-level">Intermediate</span>
+                                        <p class="skill-description">Proficient in object-oriented programming, GUI development, and enterprise applications.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-80"></div>
+                                </div>
+                                <div class="skill-percentage">80%</div>
+                            </div>
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-js-square"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>JavaScript</h4>
+                                        <span class="skill-level">Advanced</span>
+                                        <p class="skill-description">Modern JavaScript development including ES6+, DOM manipulation, and asynchronous programming.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-85"></div>
+                                </div>
+                                <div class="skill-percentage">85%</div>
+                            </div>
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-php"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>PHP</h4>
+                                        <span class="skill-level">Intermediate</span>
+                                        <p class="skill-description">Server-side scripting with database integration and dynamic web content generation.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-75"></div>
+                                </div>
+                                <div class="skill-percentage">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-card-modern" data-tilt>
+                    <div class="card-header-modern">
+                        <div class="card-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="card-badge web">Web Tech</div>
+                    </div>
+                    <div class="card-content-modern">
+                        <h3>Web Technologies</h3>
+                        <div class="skills-list">
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-react"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>React.js</h4>
+                                        <span class="skill-level">Advanced</span>
+                                        <p class="skill-description">Modern React development with hooks, context API, and component lifecycle management.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-85"></div>
+                                </div>
+                                <div class="skill-percentage">85%</div>
+                            </div>
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-html5"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>HTML5</h4>
+                                        <span class="skill-level">Expert</span>
+                                        <p class="skill-description">Semantic HTML5 markup with accessibility standards and modern web structure.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-90"></div>
+                                </div>
+                                <div class="skill-percentage">90%</div>
+                            </div>
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fab fa-css3-alt"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>CSS3</h4>
+                                        <span class="skill-level">Advanced</span>
+                                        <p class="skill-description">Advanced CSS3 styling including Flexbox, Grid, animations, and responsive design.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-88"></div>
+                                </div>
+                                <div class="skill-percentage">88%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-card-modern" data-tilt>
+                    <div class="card-header-modern">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="card-badge ai">AI & ML</div>
+                    </div>
+                    <div class="card-content-modern">
+                        <h3>Data Science & ML</h3>
+                        <div class="skills-list">
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>Pandas</h4>
+                                        <span class="skill-level">Advanced</span>
+                                        <p class="skill-description">Data manipulation and analysis with cleaning, transformation, and statistical analysis.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-85"></div>
+                                </div>
+                                <div class="skill-percentage">85%</div>
+                            </div>
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>Scikit-learn</h4>
+                                        <span class="skill-level">Intermediate</span>
+                                        <p class="skill-description">Machine learning algorithms implementation, model training, and evaluation.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-80"></div>
+                                </div>
+                                <div class="skill-percentage">80%</div>
+                            </div>
+                            <div class="skill-item-modern">
+                                <div class="skill-info">
+                                    <div class="skill-icon">
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+                                    <div class="skill-details">
+                                        <h4>NumPy</h4>
+                                        <span class="skill-level">Advanced</span>
+                                        <p class="skill-description">Numerical computing with arrays, mathematical operations, and scientific computing.</p>
+                                    </div>
+                                </div>
+                                <div class="skill-bar-modern">
+                                    <div class="skill-progress-modern skill-progress-82"></div>
+                                </div>
+                                <div class="skill-percentage">82%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Skills -->
+    <section class="additional-skills">
+        <div class="container">
+            <h2 class="section-title">Additional Skills & Tools</h2>
+            <div class="additional-skills-grid">
+                <div class="skill-category-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Development Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Jupyter Notebook</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+                <div class="skill-category-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Google Sheets API</span>
+                    </div>
+                </div>
+                <div class="skill-category-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & Deployment</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Heroku</span>
+                        <span class="skill-tag">Netlify</span>
+                        <span class="skill-tag">Vercel</span>
+                    </div>
+                </div>
+                <div class="skill-category-card" data-tilt>
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersecurity Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Wireshark</span>
+                        <span class="skill-tag">Nmap</span>
+                        <span class="skill-tag">Metasploit</span>
+                        <span class="skill-tag">Burp Suite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Summary -->
+    <section class="skills-summary">
+        <div class="container">
+            <h2 class="section-title">Skills Overview</h2>
+            <div class="summary-content">
+                <div class="summary-text">
+                    <p>I have developed a strong foundation in both frontend and backend technologies, with particular expertise in Python programming and web development. My skills span across multiple domains including AI/ML, cybersecurity, and modern web frameworks.</p>
+                    <p>I'm constantly learning and updating my skills to stay current with the latest technologies and industry trends. My goal is to become a full-stack developer with specialized knowledge in AI and cybersecurity applications.</p>
+                    <p>My approach combines technical expertise with problem-solving skills, allowing me to create innovative solutions that address real-world challenges in the digital landscape.</p>
+                </div>
+                <div class="skills-stats">
+                    <div class="stat-item-modern">
+                        <div class="stat-number">8+</div>
+                        <div class="stat-label">Programming Languages</div>
+                    </div>
+                    <div class="stat-item-modern">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Frameworks</div>
+                    </div>
+                    <div class="stat-item-modern">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item-modern">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Tools & Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Simran Kaur. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart"></i> for the future of AI & Cybersecurity</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Simran Kaur Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300d4ff'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='40' fill='white'%3ESK%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- 3D Robot Images -->
+    <div class="floating-robot robot-1">
+        <div class="robot-icon">🤖</div>
+    </div>
+    <div class="floating-robot robot-2">
+        <div class="robot-icon">👾</div>
+    </div>
+    <div class="floating-alien alien-1">
+        <div class="alien-icon">👽</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">SK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">About Me</h1>
+            <p class="page-subtitle">Passionate about AI, Cybersecurity, and Innovation</p>
+        </div>
+    </section>
+
+    <!-- Personal Introduction -->
+    <section class="personal-intro">
+        <div class="container">
+            <div class="intro-content">
+                <div class="intro-text">
+                    <h2>Hello, I'm Simran Kaur! 👋</h2>
+                    <p class="intro-description">
+                        I'm a passionate Information Technology student with a deep fascination for Artificial Intelligence, 
+                        Cybersecurity, and innovative web development. My journey in technology has been driven by an 
+                        insatiable curiosity and a desire to create meaningful solutions that make a real difference in people's lives.
+                    </p>
+                    <p class="intro-description">
+                        From my early days exploring programming concepts to my current focus on AI-driven security solutions, 
+                        I've always been captivated by how technology can solve complex problems and protect digital assets 
+                        in our increasingly connected world.
+                    </p>
+                    <div class="intro-stats">
+                        <div class="intro-stat">
+                            <span class="stat-number">80.73%</span>
+                            <span class="stat-label">B.Sc. GPA</span>
+                        </div>
+                        <div class="intro-stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="intro-stat">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="profile-card">
+                        <div class="profile-avatar">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <h3>Simran Kaur</h3>
+                        <p>AI & Cybersecurity Enthusiast</p>
+                        <div class="profile-tags">
+                            <span class="tag">Python Expert</span>
+                            <span class="tag">Web Developer</span>
+                            <span class="tag">AI Researcher</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive About Cards -->
+    <section class="about-interactive">
+        <div class="container">
+            <div class="about-grid-modern">
+                <div class="about-card-modern" data-tilt>
+                    <div class="card-header-modern">
+                        <div class="card-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="card-badge">Education</div>
+                    </div>
+                    <div class="card-content-modern">
+                        <h3>Academic Journey</h3>
+                        <div class="education-timeline-modern">
+                            <div class="education-item">
+                                <div class="education-icon">
+                                    <i class="fas fa-university"></i>
+                                </div>
+                                <div class="education-details">
+                                    <h4>B.Sc. Information Technology</h4>
+                                    <p>CT Group of Institutions</p>
+                                    <span class="gpa">GPA: 80.73%</span>
+                                    <span class="year">2022 - Present</span>
+                                    <p class="education-description">Focusing on AI, Cybersecurity, and Web Development with active participation in research projects.</p>
+                                </div>
+                            </div>
+                            <div class="education-item">
+                                <div class="education-icon">
+                                    <i class="fas fa-school"></i>
+                                </div>
+                                <div class="education-details">
+                                    <h4>12th Standard (Science, PCM)</h4>
+                                    <p>Manav Sehyog School, CBSE</p>
+                                    <span class="gpa">GPA: 94.2%</span>
+                                    <span class="year">2021</span>
+                                    <p class="education-description">Strong foundation in Physics, Chemistry, and Mathematics with excellent analytical skills.</p>
+                                </div>
+                            </div>
+                            <div class="education-item">
+                                <div class="education-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <div class="education-details">
+                                    <h4>10th Standard</h4>
+                                    <p>CBSE</p>
+                                    <span class="gpa">GPA: 90.4%</span>
+                                    <span class="year">2019</span>
+                                    <p class="education-description">Outstanding academic performance with strong fundamentals in core subjects.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card-modern" data-tilt>
+                    <div class="card-header-modern">
+                        <div class="card-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="card-badge achievements">Achievements</div>
+                    </div>
+                    <div class="card-content-modern">
+                        <h3>Achievements & Recognition</h3>
+                        <div class="achievements-list">
+                            <div class="achievement-item-modern">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-medal"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h4>3rd Position - Sculpting Art</h4>
+                                    <p>GNDU Youth Festival 2023</p>
+                                    <span class="achievement-category">Art & Culture</span>
+                                    <p class="achievement-description">Demonstrated exceptional creativity and artistic skills in a competitive environment.</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item-modern">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h4>Letter of Appreciation</h4>
+                                    <p>Loofy Project, CT Group of Institutions</p>
+                                    <span class="achievement-category">Project Excellence</span>
+                                    <p class="achievement-description">Recognized for outstanding contribution to the event management system project.</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item-modern">
+                                <div class="achievement-icon">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="achievement-details">
+                                    <h4>State-level Participation</h4>
+                                    <p>Energy Conservation Day</p>
+                                    <span class="achievement-category">Environmental Awareness</span>
+                                    <p class="achievement-description">Active participation in promoting environmental consciousness and sustainability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card-modern" data-tilt>
+                    <div class="card-header-modern">
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="card-badge interests">Interests</div>
+                    </div>
+                    <div class="card-content-modern">
+                        <h3>Passions & Interests</h3>
+                        <div class="interests-grid">
+                            <div class="interest-item">
+                                <i class="fas fa-brain"></i>
+                                <span>Artificial Intelligence</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Cybersecurity</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-code"></i>
+                                <span>Programming</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-palette"></i>
+                                <span>Art & Design</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-book"></i>
+                                <span>Reading</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-music"></i>
+                                <span>Music</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-users"></i>
+                                <span>Collaboration</span>
+                            </div>
+                            <div class="interest-item">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>Innovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mission-vision">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-card" data-tilt>
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>My Mission</h3>
+                    <p>To become a leading expert in AI and Cybersecurity, developing innovative solutions that protect organizations and individuals from evolving digital threats. I aspire to create intelligent security systems that can adapt and learn from new challenges.</p>
+                </div>
+                <div class="mission-card" data-tilt>
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>My Vision</h3>
+                    <p>To contribute to a safer digital world by leveraging cutting-edge AI technologies to build robust cybersecurity frameworks. I envision a future where technology enhances human capabilities while maintaining the highest standards of security and privacy.</p>
+                </div>
+                <div class="mission-card" data-tilt>
+                    <div class="mission-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>My Values</h3>
+                    <p>Continuous learning, ethical development, innovation, and collaboration. I believe in creating technology that serves humanity while maintaining the highest standards of integrity and responsibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personal Story Section -->
+    <section class="personal-story">
+        <div class="container">
+            <h2 class="section-title">My Story</h2>
+            <div class="story-content">
+                <div class="story-text">
+                    <p>My journey in technology began with a simple curiosity about how computers work. As I delved deeper into programming, I discovered the fascinating world of Artificial Intelligence and its potential to transform industries and solve complex problems.</p>
+                    <p>During my studies, I became particularly interested in cybersecurity - the critical need to protect our digital infrastructure and personal data. This led me to explore the intersection of AI and security, where I found my true passion.</p>
+                    <p>I believe in continuous learning and staying updated with the latest technological advancements. My goal is to contribute to the development of secure, intelligent systems that can benefit society while protecting against emerging threats.</p>
+                    <p>When I'm not coding or researching, you can find me exploring new technologies, participating in hackathons, or collaborating with fellow developers on innovative projects.</p>
+                </div>
+                <div class="story-stats">
+                    <div class="stat-item-modern">
+                        <div class="stat-number">80.73%</div>
+                        <div class="stat-label">B.Sc. GPA</div>
+                    </div>
+                    <div class="stat-item-modern">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item-modern">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                    <div class="stat-item-modern">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Learning</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Simran Kaur. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart"></i> for the future of AI & Cybersecurity</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

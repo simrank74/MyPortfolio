@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Portfolio Issues</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0a0a0a;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        .debug-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .test-div {
+            background: rgba(255, 255, 255, 0.05);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        .success { color: #00d4ff; }
+        .error { color: #ff6b6b; }
+        .warning { color: #ffa726; }
+        .nav-link {
+            color: #00d4ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug: Portfolio Issues</h1>
+    
+    <div class="debug-section">
+        <h2>Div Element Test</h2>
+        <div class="test-div">
+            <p>This is a test div element. If you can see this, div elements are working correctly.</p>
+        </div>
+        <p class="success">✓ Div elements are properly recognized</p>
+    </div>
+    
+    <div class="debug-section">
+        <h2>Backdrop-filter Test</h2>
+        <div class="test-div" id="backdrop-test">
+            <p>This div uses backdrop-filter. If it looks blurry/transparent, backdrop-filter is working.</p>
+        </div>
+        <p id="backdrop-result">Testing backdrop-filter support...</p>
+    </div>
+    
+    <div class="debug-section">
+        <h2>CSS Support Test</h2>
+        <p id="css-support">Testing CSS support...</p>
+    </div>
+    
+    <div class="debug-section">
+        <h2>Navigation</h2>
+        <a href="index.html" class="nav-link">← Back to Main Portfolio</a>
+    </div>
+
+    <script>
+        // Test backdrop-filter support
+        function testBackdropFilter() {
+            const testDiv = document.getElementById('backdrop-test');
+            const result = document.getElementById('backdrop-result');
+            
+            if (CSS.supports('backdrop-filter', 'blur(20px)')) {
+                result.innerHTML = '<span class="success">✓ Backdrop-filter is supported</span>';
+            } else if (CSS.supports('-webkit-backdrop-filter', 'blur(20px)')) {
+                result.innerHTML = '<span class="success">✓ Webkit backdrop-filter is supported</span>';
+            } else {
+                result.innerHTML = '<span class="warning">⚠ Backdrop-filter not supported, using fallback</span>';
+            }
+        }
+        
+        // Test CSS support
+        function testCSSSupport() {
+            const result = document.getElementById('css-support');
+            const tests = [
+                'CSS.supports',
+                'CSS.supports("display", "grid")',
+                'CSS.supports("transform", "translateY(0)")',
+                'CSS.supports("animation", "fade 1s")'
+            ];
+            
+            let supported = 0;
+            tests.forEach(test => {
+                try {
+                    if (eval(test)) supported++;
+                } catch (e) {
+                    // Test failed
+                }
+            });
+            
+            if (supported === tests.length) {
+                result.innerHTML = '<span class="success">✓ All CSS features supported</span>';
+            } else {
+                result.innerHTML = `<span class="warning">⚠ ${supported}/${tests.length} CSS features supported</span>`;
+            }
+        }
+        
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            testBackdropFilter();
+            testCSSSupport();
+        });
+    </script>
+</body>
+</html> 

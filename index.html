@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simran Kaur - AI & Cybersecurity Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300d4ff'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='40' fill='white'%3ESK%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-text">SK</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Loading Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- 3D Robot Images -->
+    <div class="floating-robot robot-1">
+        <div class="robot-icon">🤖</div>
+    </div>
+    <div class="floating-robot robot-2">
+        <div class="robot-icon">👾</div>
+    </div>
+    <div class="floating-alien alien-1">
+        <div class="alien-icon">👽</div>
+    </div>
+    <div class="floating-astronaut astronaut-1">
+        <div class="astronaut-icon">🧑‍🚀</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">SK</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Simran Kaur</span>
+                    <span class="title-subtitle">AI & Cybersecurity Enthusiast</span>
+                </h1>
+                <p class="hero-description">
+                    Aspiring Master's candidate in Artificial Intelligence & Cybersecurity, 
+                    passionate about developing impactful AI-driven security solutions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="projects.html" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View Projects
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Get In Touch
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-bubble" data-tilt>
+                        <span class="stat-number">80.73%</span>
+                        <span class="stat-label">B.Sc. GPA</span>
+                    </div>
+                    <div class="stat-bubble" data-tilt>
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-bubble" data-tilt>
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-content">
+                        <div class="profile-avatar">
+                            <div class="avatar-circle">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                        </div>
+                        <div class="stats">
+                            <div class="stat-item">
+                                <span class="stat-number">80.73%</span>
+                                <span class="stat-label">B.Sc. GPA</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">5+</span>
+                                <span class="stat-label">Projects</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Certifications</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Home Contact Form Section -->
+    <!-- Removed Quick Contact form section -->
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                        I'm a passionate Information Technology student with a strong foundation in AI, 
+                        cybersecurity, and web development. My journey in tech has been driven by curiosity 
+                        and a desire to create meaningful solutions that make a difference.
+                    </p>
+                    <div class="education-timeline">
+                        <h3>Education Journey</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>B.Sc. Information Technology</h4>
+                                    <p>CT Group of Institutions | 80.73%</p>
+                                    <span class="timeline-date">2022 - Present</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>12th Standard (Science, PCM)</h4>
+                                    <p>Manav Sehyog School, CBSE | 94.2%</p>
+                                    <span class="timeline-date">2021</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h4>10th Standard</h4>
+                                    <p>CBSE | 90.4%</p>
+                                    <span class="timeline-date">2019</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="achievement-cards">
+                        <div class="achievement-card" data-tilt>
+                            <i class="fas fa-trophy"></i>
+                            <h4>3rd Position</h4>
+                            <p>Sculpting Art, GNDU Youth Festival 2023</p>
+                        </div>
+                        <div class="achievement-card" data-tilt>
+                            <i class="fas fa-certificate"></i>
+                            <h4>Letter of Appreciation</h4>
+                            <p>Loofy Project, CT Group of Institutions</p>
+                        </div>
+                        <div class="achievement-card" data-tilt>
+                            <i class="fas fa-leaf"></i>
+                            <h4>State-level Participation</h4>
+                            <p>Energy Conservation Day</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Research</h2>
+            <div class="experience-grid">
+                <div class="experience-card" data-tilt>
+                    <div class="card-header">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h3>IELTS Trainer</h3>
+                        <span class="company">Brainstorming Language Center</span>
+                        <span class="duration">March 2022 - May 2022</span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Delivered focused IELTS preparation sessions</li>
+                            <li>Customized lesson planning and targeted feedback</li>
+                            <li>Helped students improve band scores</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-tilt>
+                    <div class="card-header">
+                        <i class="fas fa-microscope"></i>
+                        <h3>NLP Research</h3>
+                        <span class="company">Conference on Sustainability</span>
+                        <span class="duration">2023</span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Natural Language Processing for Sentiment Analysis</li>
+                            <li>Analyzed sentiment in digital ecosystems</li>
+                            <li>Contributed to data-driven insights</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="experience-card" data-tilt>
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>AI & Cybersecurity Research</h3>
+                        <span class="company">Conference on Current Trends</span>
+                        <span class="duration">2023</span>
+                    </div>
+                    <div class="card-body">
+                        <ul>
+                            <li>AI-based threat detection mechanisms</li>
+                            <li>Critical ethical/security implications</li>
+                            <li>Advanced cybersecurity solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Trailer Tracking System</h3>
+                        <p>Real-time fleet locator system with cloud-based data logging and user-friendly interface.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Google Sheets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Loofy - Event Management</h3>
+                        <p>Comprehensive event management system with scheduling, task assignment, and progress tracking.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Google Sheets</span>
+                        </div>
+                        <div class="project-badge">
+                            <i class="fas fa-award"></i> Letter of Appreciation
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Task Masters</h3>
+                        <p>Priority-based to-do tracker enabling users to organize daily activities efficiently.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <div class="project-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Online Bookstore UI</h3>
+                        <p>Responsive customer portal for seamless book browsing and secure online purchases.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span class="skill-name">Python (Advanced)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-95"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Java">
+                            <div class="skill-icon"><i class="fab fa-java"></i></div>
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="PHP">
+                            <div class="skill-icon"><i class="fab fa-php"></i></div>
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-75"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Web Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="React">
+                            <div class="skill-icon"><i class="fab fa-react"></i></div>
+                            <span class="skill-name">React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="HTML">
+                            <div class="skill-icon"><i class="fab fa-html5"></i></div>
+                            <span class="skill-name">HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="CSS">
+                            <div class="skill-icon"><i class="fab fa-css3-alt"></i></div>
+                            <span class="skill-name">CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Data Science & ML</h3>
+                    <div class="skill-items">
+                        <div class="skill-item" data-skill="Pandas">
+                            <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+                            <span class="skill-name">Pandas</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Scikit-learn">
+                            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                            <span class="skill-name">Scikit-learn</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="NumPy">
+                            <div class="skill-icon"><i class="fas fa-calculator"></i></div>
+                            <span class="skill-name">NumPy</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress skill-progress-82"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Jalandhar, Punjab, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>simrankalsi2003@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98552 81445</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/simran-kaur-kalsi" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/simran74" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://learn.microsoft.com/en-gb/users/simrankaur-9041/" target="_blank" rel="noopener noreferrer" class="social-link" title="Microsoft Learn Profile">
+                            <i class="fab fa-microsoft"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Simran Kaur. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart"></i> for the future of AI & Cybersecurity</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // Emergency loader hide - ensures loader is hidden even if main JS fails
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.loader');
+            if (loader) {
+                loader.classList.add('hidden');
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }
+        });
+
+        // EmailJS for main contact form
+        (function() {
+            if (window.emailjs) {
+                emailjs.init("RkUAibsFi5a2zu69x");
+            }
+        })();
+
+        // Main contact form handling
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                let formMessage = contactForm.querySelector('.form-message');
+                if (!formMessage) {
+                    formMessage = document.createElement('div');
+                    formMessage.className = 'form-message';
+                    contactForm.appendChild(formMessage);
+                }
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    subject: document.getElementById('subject').value,
+                    message: document.getElementById('message').value
+                };
+                emailjs.send('service_y0op5k8', 'template_bjs32js', {
+                    name: formData.name,
+                    email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message
+                })
+                .then(function(response) {
+                    formMessage.innerHTML = '<i class="fas fa-check-circle"></i> Message sent successfully! I\'ll get back to you soon.';
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                    contactForm.reset();
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    submitBtn.disabled = false;
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 5000);
+                })
+                .catch(function(error) {
+                    formMessage.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact me directly at simrankalsi2003@gmail.com';
+                    formMessage.className = 'form-message error';
+                    formMessage.style.display = 'block';
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                    submitBtn.disabled = false;
+                    console.error('EmailJS Error:', error);
+                });
+            });
+        }
+    </script>
+</body>
+</html> 

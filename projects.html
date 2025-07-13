@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Simran Kaur Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300d4ff'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='40' fill='white'%3ESK%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="additional-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- 3D Robot Images -->
+    <div class="floating-robot robot-1">
+        <div class="robot-icon">🤖</div>
+    </div>
+    <div class="floating-robot robot-2">
+        <div class="robot-icon">👾</div>
+    </div>
+    <div class="floating-alien alien-1">
+        <div class="alien-icon">👽</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">SK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">My Projects</h1>
+            <p class="page-subtitle">Showcasing innovative solutions in AI, Web Development, and Cybersecurity</p>
+        </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="project-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item-large" data-tilt>
+                    <div class="stat-icon-large">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>4</h3>
+                        <p>Completed Projects</p>
+                    </div>
+                </div>
+                <div class="stat-item-large" data-tilt>
+                    <div class="stat-icon-large">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>100+</h3>
+                        <p>Users Impacted</p>
+                    </div>
+                </div>
+                <div class="stat-item-large" data-tilt>
+                    <div class="stat-icon-large">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>1</h3>
+                        <p>Award Recognition</p>
+                    </div>
+                </div>
+                <div class="stat-item-large" data-tilt>
+                    <div class="stat-icon-large">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3>500+</h3>
+                        <p>Development Hours</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects-showcase">
+        <div class="container">
+            <div class="projects-grid">
+                <!-- Trailer Tracking System -->
+                <div class="project-card-large" data-tilt>
+                    <div class="project-image">
+                        <img src="images/tanx transport/Screenshot 2025-07-13 124005.png" alt="Trailer Tracking System" class="project-screenshot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link gallery-btn" title="View Gallery" data-project="tanx">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Trailer Tracking System</h3>
+                            <span class="project-badge featured">Featured</span>
+                        </div>
+                        <p class="project-description">
+                            Real-time fleet locator system with cloud-based data logging and user-friendly interface. 
+                            Enables efficient tracking and management of trailer fleet operations.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Real-time GPS tracking</li>
+                                <li>Cloud-based data storage</li>
+                                <li>User-friendly dashboard</li>
+                                <li>Route optimization</li>
+                                <li>Historical data analysis</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Google Sheets API</span>
+                            <span class="tech-tag">GPS Integration</span>
+                            <span class="tech-tag">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Loofy Event Management -->
+                <div class="project-card-large" data-tilt>
+                    <div class="project-image">
+                        <img src="images/loofy event management/Screenshot 2025-05-11 154414.png" alt="Loofy Event Management" class="project-screenshot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link gallery-btn" title="View Gallery" data-project="loofy">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Loofy - Event Management</h3>
+                            <span class="project-badge award">Award Winner</span>
+                        </div>
+                        <p class="project-description">
+                            Comprehensive event management system with scheduling, task assignment, and progress tracking. 
+                            Streamlines event planning and coordination processes.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Event scheduling & management</li>
+                                <li>Task assignment & tracking</li>
+                                <li>Team collaboration tools</li>
+                                <li>Progress monitoring</li>
+                                <li>Automated notifications</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Google Sheets</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="project-recognition">
+                            <i class="fas fa-award"></i>
+                            <span>Letter of Appreciation from CT Group of Institutions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Masters -->
+                <div class="project-card-large" data-tilt>
+                    <div class="project-image">
+                        <img src="images/task master/Screenshot 2025-07-13 104650.png" alt="Task Masters" class="project-screenshot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link gallery-btn" title="View Gallery" data-project="taskmaster">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Task Masters</h3>
+                            <span class="project-badge">Web App</span>
+                        </div>
+                        <p class="project-description">
+                            Priority-based to-do tracker enabling users to organize daily activities efficiently. 
+                            Features intelligent task prioritization and productivity insights.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Priority-based task management</li>
+                                <li>Due date tracking</li>
+                                <li>Progress visualization</li>
+                                <li>Category organization</li>
+                                <li>Productivity analytics</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Online Bookstore UI -->
+                <div class="project-card-large" data-tilt>
+                    <div class="project-image">
+                        <img src="images/papyr/Screenshot 2025-05-27 154916.png" alt="Online Bookstore UI" class="project-screenshot">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" title="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" title="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link gallery-btn" title="View Gallery" data-project="papyr">
+                                    <i class="fas fa-images"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Online Bookstore UI</h3>
+                            <span class="project-badge">E-commerce</span>
+                        </div>
+                        <p class="project-description">
+                            Responsive customer portal for seamless book browsing and secure online purchases. 
+                            Features modern UI/UX design with intuitive navigation.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Responsive design</li>
+                                <li>Product catalog</li>
+                                <li>Shopping cart functionality</li>
+                                <li>Secure checkout process</li>
+                                <li>User account management</li>
+                            </ul>
+                        </div>
+                        <div class="tech-stack">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Modal -->
+    <div id="gallery-modal" class="gallery-modal">
+        <div class="gallery-content">
+            <span class="gallery-close">&times;</span>
+            <h2 id="gallery-title">Project Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-nav">
+                    <button class="gallery-nav-btn" id="prev-btn" title="Previous Image">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="gallery-nav-btn" id="next-btn" title="Next Image">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="gallery-image-container">
+                    <img id="gallery-image" src="" alt="Project Screenshot">
+                </div>
+                <div class="gallery-thumbnails" id="gallery-thumbnails">
+                    <!-- Thumbnails will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Simran Kaur. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart"></i> for the future of AI & Cybersecurity</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

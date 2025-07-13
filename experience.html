@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Simran Kaur Portfolio</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%2300d4ff'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='40' fill='white'%3ESK%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css?v=1.1">
+    <link rel="stylesheet" href="additional-styles.css?v=1.1">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- 3D Robot Images -->
+    <div class="floating-robot robot-1">
+        <div class="robot-icon">🤖</div>
+    </div>
+    <div class="floating-robot robot-2">
+        <div class="robot-icon">👾</div>
+    </div>
+    <div class="floating-alien alien-1">
+        <div class="alien-icon">👽</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html" class="logo-text">SK</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="experience.html" class="nav-link active">Experience</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">Experience & Research</h1>
+            <p class="page-subtitle">My professional journey, research contributions, and academic achievements</p>
+        </div>
+    </section>
+
+    <!-- Experience Overview -->
+    <section class="experience-overview">
+        <div class="container">
+            <div class="overview-content">
+                <div class="overview-text">
+                    <h2>Professional Journey</h2>
+                    <p>My experience spans across teaching, research, and development, with a focus on AI, cybersecurity, and educational technology. Each role has contributed to my growth as a technologist and researcher.</p>
+                </div>
+                <div class="overview-stats">
+                    <div class="overview-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Teaching</h3>
+                            <p>IELTS Training</p>
+                        </div>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Research</h3>
+                            <p>NLP & AI Security</p>
+                        </div>
+                    </div>
+                    <div class="overview-stat">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>Development</h3>
+                            <p>5+ Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="professional-experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item" data-tilt>
+                    <div class="experience-header">
+                        <div class="experience-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="experience-info">
+                            <h3>IELTS Trainer</h3>
+                            <p class="company">Brainstorming Language Center</p>
+                            <p class="duration">March 2022 - May 2022</p>
+                        </div>
+                        <div class="experience-badge">Teaching</div>
+                    </div>
+                    <div class="experience-content">
+                        <p class="experience-description">
+                            Delivered comprehensive IELTS preparation sessions, helping students achieve their target band scores through personalized instruction and strategic guidance.
+                        </p>
+                        <div class="experience-details">
+                            <h4>Key Responsibilities:</h4>
+                            <ul>
+                                <li>Conducted focused IELTS preparation sessions for all four modules (Reading, Writing, Listening, Speaking)</li>
+                                <li>Developed customized lesson plans tailored to individual student needs and learning styles</li>
+                                <li>Provided detailed feedback on practice tests and assignments to improve performance</li>
+                                <li>Implemented effective teaching strategies to enhance students' English proficiency</li>
+                                <li>Tracked student progress and provided regular performance assessments</li>
+                            </ul>
+                        </div>
+                        <div class="experience-skills">
+                            <span class="skill-tag">Teaching</span>
+                            <span class="skill-tag">Curriculum Development</span>
+                            <span class="skill-tag">Student Assessment</span>
+                            <span class="skill-tag">Communication</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section class="research-experience">
+        <div class="container">
+            <h2 class="section-title">Research & Academic Contributions</h2>
+            <div class="research-grid">
+                <div class="research-card" data-tilt>
+                    <div class="research-header">
+                        <div class="research-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="research-info">
+                            <h3>NLP Research - Sentiment Analysis</h3>
+                            <p class="conference">Conference on Sustainability</p>
+                            <p class="year">2023</p>
+                        </div>
+                        <div class="research-badge">Research</div>
+                    </div>
+                    <div class="research-content">
+                        <p class="research-description">
+                            Conducted comprehensive research on Natural Language Processing for sentiment analysis in digital ecosystems, contributing to data-driven insights for sustainable development.
+                        </p>
+                        <div class="research-details">
+                            <h4>Research Focus:</h4>
+                            <ul>
+                                <li>Developed sentiment analysis models for social media data</li>
+                                <li>Analyzed public opinion trends related to sustainability initiatives</li>
+                                <li>Implemented machine learning algorithms for text classification</li>
+                                <li>Contributed to understanding public sentiment towards environmental policies</li>
+                                <li>Presented findings at academic conference</li>
+                            </ul>
+                        </div>
+                        <div class="research-skills">
+                            <span class="skill-tag">NLP</span>
+                            <span class="skill-tag">Machine Learning</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-card" data-tilt>
+                    <div class="research-header">
+                        <div class="research-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="research-info">
+                            <h3>AI & Cybersecurity Research</h3>
+                            <p class="conference">Conference on Current Trends</p>
+                            <p class="year">2023</p>
+                        </div>
+                        <div class="research-badge">Security</div>
+                    </div>
+                    <div class="research-content">
+                        <p class="research-description">
+                            Investigated AI-based threat detection mechanisms and their critical implications for cybersecurity, focusing on ethical considerations and advanced security solutions.
+                        </p>
+                        <div class="research-details">
+                            <h4>Research Focus:</h4>
+                            <ul>
+                                <li>Explored AI-powered threat detection and prevention systems</li>
+                                <li>Analyzed ethical implications of AI in cybersecurity</li>
+                                <li>Investigated machine learning approaches for anomaly detection</li>
+                                <li>Studied the balance between security and privacy in AI systems</li>
+                                <li>Proposed frameworks for responsible AI implementation in security</li>
+                            </ul>
+                        </div>
+                        <div class="research-skills">
+                            <span class="skill-tag">AI Security</span>
+                            <span class="skill-tag">Ethical AI</span>
+                            <span class="skill-tag">Threat Detection</span>
+                            <span class="skill-tag">Cybersecurity</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Achievements -->
+    <section class="academic-achievements">
+        <div class="container">
+            <h2 class="section-title">Academic Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>3rd Position - Sculpting Art</h3>
+                    <p class="achievement-event">GNDU Youth Festival 2023</p>
+                    <p class="achievement-description">Demonstrated exceptional creativity and artistic skills in a competitive environment, showcasing versatility beyond technical expertise.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Letter of Appreciation</h3>
+                    <p class="achievement-event">Loofy Project, CT Group of Institutions</p>
+                    <p class="achievement-description">Recognized for outstanding contribution to the event management system project, demonstrating leadership and technical excellence.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>State-level Participation</h3>
+                    <p class="achievement-event">Energy Conservation Day</p>
+                    <p class="achievement-description">Active participation in promoting environmental consciousness and sustainability, contributing to social responsibility initiatives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Development -->
+    <section class="skills-development">
+        <div class="container">
+            <h2 class="section-title">Skills Development Through Experience</h2>
+            <div class="skills-development-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fas fa-code"></i>
+                            <span>Advanced Python Programming</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Machine Learning & AI</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersecurity Fundamentals</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Web Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <i class="fas fa-users"></i>
+                            <span>Team Collaboration</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-comments"></i>
+                            <span>Communication</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Simran Kaur. All rights reserved.</p>
+            <p>Designed with <i class="fas fa-heart"></i> for the future of AI & Cybersecurity</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
